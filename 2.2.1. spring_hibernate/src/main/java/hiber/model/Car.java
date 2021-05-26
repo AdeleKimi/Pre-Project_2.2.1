@@ -17,7 +17,8 @@ public class Car {
     private String model;
     @Column
     private int series;
-    @OneToOne(optional = true,mappedBy = "car")
+    @OneToOne(mappedBy = "car")
+
     private User user;
 
 
@@ -66,8 +67,6 @@ public class Car {
     public String toString() {
         return "Car{" +
                 "model='" + model + '\'' +
-                ", series=" + series +
-                ", user=" + user +
-                '}';
+                ", series=" + series;
     }
 }
